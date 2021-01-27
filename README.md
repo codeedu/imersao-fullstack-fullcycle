@@ -27,6 +27,7 @@ Utilizamos Docker para que todos os serviços que utilizaremos fiquem disponíve
 - PgAdmin
 - Apache Kafka
 - Criador dos tópicos a serem utilizados pelo Kafka
+- Confluent control center
 - ZooKeeper
 
  
