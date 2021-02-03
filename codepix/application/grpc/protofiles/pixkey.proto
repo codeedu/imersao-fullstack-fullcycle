@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package github.com.codeedu.codepix;
+
+option go_package = "protofiles;pb";
+
+message PixKeyRegistration {
+    string kind = 1;
+    string key = 2;
+    string accountId = 3;
+}
+
+message PixKey {
+    string kind = 1;
+    string key = 2;
+}
+
+message Account {
+    string accountId = 1;
+    string accountNumber = 2;
+    string bankId = 3;
+    string bankName = 4;
+    string OwnerName = 5;
+    string createdAt = 6;
+}
+
+message PixKeyInfo {
+    string id = 1;
+    string kind = 2;
+    string key = 3;
+    Account account = 4;
+    string createdAt = 5;
+}
+
+message PixKeyCreatedResult {
+    string id = 1;
+    string status = 2;
+    string error = 3;
+}
+
+service PixService {
+    rpc RegisterPixKey (PixKeyRegistration) returns (PixKeyCreatedResult) {};
+    rpc Find(PixKey) returns (PixKeyInfo) {};
+}
