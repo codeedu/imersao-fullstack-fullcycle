@@ -3,8 +3,12 @@ version: "3"
 services:
   app:
     build: .
+    ports:
+    - "50051:50051"
     volumes:
       - .:/go/src/
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
 
   db:
     image: postgres:9.4

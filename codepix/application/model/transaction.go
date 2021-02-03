@@ -14,7 +14,7 @@ type Transaction struct {
 	PixKeyKindTo string  `json:"pixKeyKindTo" validate:"required"`
 	Description  string  `json:"description" validate:"required"`
 	Status       string  `json:"status" validate:"-"`
-	Error        string  `json:"description"`
+	Error        string  `json:"error"`
 }
 
 func (t *Transaction) isValid() error {

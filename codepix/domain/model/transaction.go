@@ -88,6 +88,8 @@ func NewTransaction(accountFrom *Account, amount float64, pixKeyTo *PixKey, desc
 	}
 	if id == "" {
 		transaction.ID = uuid.NewV4().String()
+	} else {
+		transaction.ID = id
 	}
 	transaction.CreatedAt = time.Now()
 	err := transaction.isValid()

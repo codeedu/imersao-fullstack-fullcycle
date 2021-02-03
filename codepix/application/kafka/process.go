@@ -44,6 +44,7 @@ func (k *KafkaProcessor) Consume() {
 	for {
 		msg, err := c.ReadMessage(-1)
 		if err == nil {
+			fmt.Println(string(msg.Value))
 			k.processMessage(msg)
 		}
 	}

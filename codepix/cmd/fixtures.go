@@ -46,11 +46,11 @@ var fixturesCmd = &cobra.Command{
 		pixRepository.AddAccount(account2)
 
 		account3, _ := model.NewAccount(bankCTER, "3333", "User CTER 1")
-		account2.ID = "103cc632-78e7-4476-ab63-d5ad3a562d26"
+		account3.ID = "103cc632-78e7-4476-ab63-d5ad3a562d26"
 		pixRepository.AddAccount(account3)
 
 		account4, _ := model.NewAccount(bankCTER, "4444", "User CTER 2")
-		account2.ID = "463b1b2a-b5fa-4b88-9c31-e5c894a20ae3"
+		account4.ID = "463b1b2a-b5fa-4b88-9c31-e5c894a20ae3"
 		pixRepository.AddAccount(account4)
 	},
 }
