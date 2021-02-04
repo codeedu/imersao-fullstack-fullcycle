@@ -1,2 +1,4 @@
 .pgdata
 .idea
+.env
+.vscode
