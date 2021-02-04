@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+  app_cter:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: imersao-fullcycle-nest-bank-cter
+    environment: 
+      - TYPEORM_DATABASE=cter
+      - TYPEORM_HOST=db_cter
+      - BANK_CODE=002
+    ports:
+      - 8002:3000
+    volumes:
+      - .:/home/node/app
+      - ./dist-cter:/home/node/app/dist
+    depends_on:
+      - db_cter
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    networks: 
+      - cter-network
+  
+  db_cter:
+    build: .docker/postgres
+    container_name: imersao-fullcycle-nest-bank-db-cter
+    restart: always
+    tty: true
+    volumes:
+      - .docker/dbdatacter:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=cter
+    networks: 
+      - cter-network
+
+networks: 
+  cter-network:
+    driver: bridge
