@@ -1,0 +1,57 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+.root {
+    background-color: $white;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    @include respond-to($_768) {
+        width: 300px;
+    }
+
+    @include respond-to($_992) {
+        width: 340px;
+    }
+
+    &.bank001 {
+        border-left: 4px solid $bank001;
+    }
+
+    &.bank002 {
+        border-left: 4px solid $bank002;
+    }
+
+    &.bank003 {
+        border-left: 4px solid $bank003;
+    }
+
+    &.bank004 {
+        border-left: 4px solid $bank004;
+    }
+
+    &.bank005 {
+        border-left: 4px solid $bank005;
+    }
+
+    &.bank006 {
+        border-left: 4px solid $bank006;
+    }
+
+    .kind {
+        font-size: 1em;
+        font-weight: 600;
+        color: $color-text;
+    }
+
+    .key {
+        font-size: 1em;
+        font-weight: 300;
+        color: $color-text;
+        position: relative;
+        top: -5px;
+    }
+}

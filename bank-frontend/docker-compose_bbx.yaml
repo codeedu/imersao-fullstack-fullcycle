@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  app_bbx:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: imersao-fullcycle-next-bank-bbx
+    ports:
+      - 3001:3000
+    environment: 
+      - NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:8001/api
+      - NEXT_PUBLIC_BANK_NAME=BBX
+      - NEXT_PUBLIC_BANK_CODE=001
+    volumes:
+      - .:/home/node/app
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    networks: 
+      - bbx-network
+
+networks: 
+  bbx-network:
+    driver: bridge

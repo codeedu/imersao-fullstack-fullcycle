@@ -1,0 +1,35 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+@import "Header.module.scss";
+@import "ActionLink.module.scss";
+
+.titleTable {
+  font-size: 1.25em;
+  font-weight: 400;
+  color: $color-text;
+  margin-bottom: 10px;
+}
+
+.tableTransactions {
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 20px;
+
+  tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  thead {
+    border-top-left-radius: 7px;
+  }
+
+  th,
+  td {
+    padding: 5px 10px;
+  }
+
+  td {
+    color: $color-text;
+  }
+}

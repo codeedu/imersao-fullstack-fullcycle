@@ -1,0 +1,63 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+.root {
+    padding: 0 0 0 20px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+
+    @include respond-to($_768) {
+        margin-bottom: 0;
+    }
+
+    &.bank001 {
+        background-color: $bank001;
+    }
+
+    &.bank002 {
+        background-color: $bank002;
+    }
+
+    &.bank003 {
+        background-color: $bank003;
+    }
+
+    &.bank004 {
+        background-color: $bank004;
+    }
+
+    &.bank005 {
+        background-color: $bank005;
+    }
+
+    &.bank006 {
+        background-color: $bank006;
+    }
+
+
+
+    h2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 1.2em;
+        font-weight: 500;
+        color: $white;
+        margin: 0;
+
+        span {
+            margin-left: 15px;
+            padding-left: 15px;
+
+            font-size: 1.5em;
+            font-weight: 400;
+            padding: 15px 20px;
+
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            border-bottom-right-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+    }
+}
