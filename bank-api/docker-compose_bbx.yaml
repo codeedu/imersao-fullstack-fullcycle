@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+  app_bbx:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: imersao-fullcycle-nest-bank-bbx
+    environment: 
+      - TYPEORM_DATABASE=bbx
+      - TYPEORM_HOST=db_bbx
+      - BANK_CODE=001
+    ports:
+      - 8001:3000
+    volumes:
+      - .:/home/node/app
+      - ./dist-bbx:/home/node/app/dist
+    depends_on:
+      - db_bbx
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    networks: 
+      - bbx-network
+  
+  db_bbx:
+    build: .docker/postgres
+    container_name: imersao-fullcycle-nest-bank-db-bbx
+    restart: always
+    tty: true
+    volumes:
+      - .docker/dbdatabbx:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=bbx
+    networks: 
+      - bbx-network
+
+networks: 
+  bbx-network:
+    driver: bridge
