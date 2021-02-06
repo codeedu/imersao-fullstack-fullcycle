@@ -1,0 +1,17 @@
+$_240: 240px;
+$_576: 576px;
+$_768: 768px;
+$_992: 992px;
+$_1200: 1200px;
+$_1440: 1440px;
+$_1680: 1680px;
+
+@mixin respond-to($media, $type: min) {
+  @if $type == max {
+    $media: $media - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $media) {
+    @content;
+  }
+}

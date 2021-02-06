@@ -1,0 +1,12 @@
+.form-control {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+label {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: $color-text;
+}

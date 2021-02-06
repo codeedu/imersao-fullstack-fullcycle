@@ -1,0 +1,104 @@
+@import "styles/sass/variables";
+
+.root {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+
+  padding: 17px 20px;
+  margin-bottom: 30px;
+
+  &.bank001 {
+    border-left: 4px solid $bank001;
+  }
+
+  &.bank002 {
+    border-left: 4px solid $bank002;
+  }
+
+  &.bank003 {
+    border-left: 4px solid $bank003;
+  }
+
+  &.bank004 {
+    border-left: 4px solid $bank004;
+  }
+
+  &.bank005 {
+    border-left: 4px solid $bank005;
+  }
+
+  &.bank006 {
+    border-left: 4px solid $bank006;
+  }
+
+  .ownerName {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: $color-text;
+  }
+
+  .accountNumber {
+    font-size: 0.7em;
+    font-weight: 600;
+
+    &.bank001 {
+      color: $bank001;
+    }
+
+    &.bank002 {
+      color: $bank002;
+    }
+
+    &.bank003 {
+      color: $bank003;
+    }
+
+    &.bank004 {
+      color: $bank004;
+    }
+
+    &.bank005 {
+      color: $bank005;
+    }
+
+    &.bank006 {
+      color: $bank006;
+    }
+  }
+
+  .iconRight {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 4px 7px;
+    background-color: #f9f9f9;
+    font-size: 1.2em;
+
+    &.bank001 {
+      color: $bank001;
+    }
+
+    &.bank002 {
+      color: $bank002;
+    }
+
+    &.bank003 {
+      color: $bank003;
+    }
+
+    &.bank004 {
+      color: $bank004;
+    }
+
+    &.bank005 {
+      color: $bank005;
+    }
+
+    &.bank006 {
+      color: $bank006;
+    }
+  }
+}

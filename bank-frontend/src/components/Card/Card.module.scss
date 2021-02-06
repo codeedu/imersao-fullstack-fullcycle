@@ -1,0 +1,13 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+.root {
+  background-color: $white;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  padding: 20px;
+
+  @include respond-to($_992) {
+    width: 450px;
+  }
+}

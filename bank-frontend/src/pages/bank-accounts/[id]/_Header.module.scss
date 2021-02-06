@@ -1,0 +1,19 @@
+@import "styles/sass/mixins";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include respond-to($_768) {
+    flex-direction: row;
+  }
+
+  .buttonActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

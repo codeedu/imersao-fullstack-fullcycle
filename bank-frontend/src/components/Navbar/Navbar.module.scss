@@ -1,0 +1,106 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+
+.root {
+  padding: 0;
+
+  &.bank001 {
+    background-color: $bank001;
+  }
+
+  &.bank002 {
+    background-color: $bank002;
+  }
+
+  &.bank003 {
+    background-color: $bank003;
+  }
+
+  &.bank004 {
+    background-color: $bank004;
+  }
+
+  &.bank005 {
+    background-color: $bank005;
+  }
+
+  &.bank006 {
+    background-color: $bank006;
+  }
+
+  .navbarBody {
+    padding-left: 10px;
+
+    @include respond-to($_768) {
+      padding-left: 0;
+    }
+
+    @include respond-to($_992) {
+      max-width: 900px;
+    }
+
+    .navbarBrand {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .logoBank {
+        max-width: 47px;
+        max-height: 47px;
+        margin-right: 15px;
+      }
+
+      .bankName {
+        span {
+          font-size: 0.6em;
+          font-weight: 400;
+          color: $white;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          font-size: 1.2em;
+          font-weight: 400;
+          color: $white;
+          position: relative;
+          bottom: 8px;
+        }
+      }
+    }
+
+    .navbarRightRoot {
+      .navbarRightBody {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .bankAccountInfo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          background-color: $white;
+          border: 1px solid $color-text;
+          color: $color-text;
+
+          border-radius: 4px;
+          padding: 3px 10px;
+
+          margin-right: 70px;
+
+          .iconUser {
+            margin-right: 5px;
+          }
+
+          .ownerName {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: $color-text;
+          }
+        }
+      }
+    }
+  }
+}

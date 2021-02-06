@@ -1,0 +1,21 @@
+@import "styles/sass/variables";
+@import "styles/sass/mixins";
+
+.root {
+  background-color: $primary;
+  background: url("/img/back.png") no-repeat right top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  min-height: calc(100vh - 130px);
+
+  &>div{
+    padding-top: 24px;
+  
+    @include respond-to($_992) {
+      max-width: 900px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.btn {
+    font-size: 1.2em;
+    margin-left: 15px;
+    padding: 3px 20px;
+    border-radius: 7px;
+
+    &.btn-primary {
+        &.bank001 {
+            background-color: $bank001;
+            border-color: $bank001;
+        }
+
+        &.bank002 {
+            background-color: $bank002;
+            border-color: $bank002;
+        }
+
+        &.bank003 {
+            background-color: $bank003;
+            border-color: $bank003;
+        }
+
+        &.bank004 {
+            background-color: $bank004;
+            border-color: $bank004;
+        }
+
+        &.bank005 {
+            background-color: $bank005;
+            border-color: $bank005;
+        }
+
+        &.bank006 {
+            background-color: $bank006;
+            border-color: $bank006;
+        }
+    }
+
+    &.btn-info {
+        background-color: #f8f8f8;
+        border-color: #ddd;
+        color: $color-text;
+    }
+}
