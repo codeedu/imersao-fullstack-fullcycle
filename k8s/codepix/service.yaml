@@ -1,0 +1,11 @@
+apiVersion: v1  
+kind: Service
+metadata:
+  name: codepix-service
+spec:
+  type: ClusterIP
+  selector:
+    app: codepix
+  ports:
+  - port: 50051
+

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bankapi002-conf
+data:
+  env: |
+    TYPEORM_CONNECTION=postgres
+    TYPEORM_HOST=postgres-postgresql
+    TYPEORM_USERNAME=postgres
+    TYPEORM_DATABASE=bank002
+    TYPEORM_PORT=5432
+    TYPEORM_ENTITIES=src/**/*.model.ts
+    TYPEORM_ENTITIES_DIR=src/models
+    TYPEORM_MIGRATIONS=src/migrations/**/*.ts
+    TYPEORM_MIGRATIONS_DIR=src/migrations
+    GRPC_URL=codepix-service:50051
+    KAFKA_CLIENT_ID=codepix
+    KAFKA_BROKER=kafka:9092
+    KAFKA_CONSUMER_GROUP_ID=bank002
+    BANK_CODE=002

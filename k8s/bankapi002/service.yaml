@@ -1,0 +1,11 @@
+apiVersion: v1  
+kind: Service
+metadata:
+  name: bankapi002-service
+spec:
+  type: ClusterIP
+  selector:
+    app: bankapi002
+  ports:
+  - port: 3000
+

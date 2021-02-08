@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bankapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bankapi
+  template:
+    metadata:
+      labels:
+        app: bankapi
+    spec:
+      containers:
+        - name: codepix
+          image: wesleywillians/imersao-bankapi:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: bankapi-secret
+
+          volumeMounts:
+            - name: bankapi-volume
+              mountPath: /home/node/app/.env
+              subPath: .env
+              
+
+      volumes:
+        - name: bankapi-volume
+          configMap:
+            name: bankapi-conf
+            items:
+              - key: env
+                path: .env
+          
+        

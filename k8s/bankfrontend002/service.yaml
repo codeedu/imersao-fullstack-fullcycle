@@ -1,0 +1,11 @@
+apiVersion: v1  
+kind: Service
+metadata:
+  name: bankfrontend002-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: bankfrontend002
+  ports:
+  - port: 3000
+

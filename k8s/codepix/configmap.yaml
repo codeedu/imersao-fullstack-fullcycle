@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: codepix-conf
+data:
+  env: |
+    dbType="postgres"
+    dbTypeTest="sqlite3"
+    dsnTest=":memory"
+    env="dev"
+    debug="true"
+    AutoMigrateDb="true"
+    kafkaBootstrapServers="kafka:9092"
+    kafkaConsumerGroupId="codepix"
+    kafkaTransactionTopic="transactions"
+    kafkaTransactionConfirmationTopic="transaction_confirmation"

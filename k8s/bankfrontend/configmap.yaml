@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bankfrontend-conf
+data:
+  env: |
+   NEXT_PUBLIC_NEST_API_URL=http://bankapi-service:3000/api
+   NEXT_PUBLIC_BANK_NAME=BBX
+   NEXT_PUBLIC_BANK_CODE=001
